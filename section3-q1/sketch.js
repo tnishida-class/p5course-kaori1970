@@ -8,9 +8,14 @@ function setup(){
   cycle = 100;
 }
 
+x=50;
+
 function draw(){
   background(160, 192, 255);
   count = (count + 1) % cycle;
-  // BLANK[1]
-  ellipse(width / 2, height / 2, size);
+  if (keyIsDown(UP_ARROW)){x += 1; }
+  if(keyIsDown(DOWN_ARROW)){ x -= 1; }
+  if(x<0){x = cycle }
+  if(x>100){x = 0 }
+  ellipse(width / 2, height / 2, x);
 }
