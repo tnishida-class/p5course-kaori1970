@@ -6,7 +6,7 @@ function setup(){
   fill(0);
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
-  star(250, 50, 40, 10);
+  regularpolygon(250, 50, 40, 10);
 }
 
 function crossmark(x1, y1, x2, y2){
@@ -24,7 +24,7 @@ function ngmark(cx, cy, r){
   pop();
 }
 
-function star(cx, cy, r, n){
+function regularpolygon(cx, cy, r, n){
   beginShape();
   for(var i = 0; i < n; i++){
     let theta = TWO_PI * i  / n ;
