@@ -2,7 +2,6 @@
 function setup(){
   createCanvas(windowWidth, windowHeight);
   const a = ["日", "月", "火", "水", "木", "金", "土"];
-
 //dayOfWeek(1981,7,17);
   // isLeapYear の動作確認のため console に出力しています
 //for(let i = 2000; i <= 2100; i++){
@@ -17,10 +16,7 @@ function setup(){
 kousizyou();
 itiretume();
 calendar(1703, 9);
-
 }
-
-
 
 function calendar(y, m){
   let dow = dayOfWeek(y, m, 1);
@@ -31,7 +27,6 @@ function calendar(y, m){
     }else if(dayOfWeek(y,m,d) % 7 == 0){
       e = e +1;
     }
-
     if( dayOfWeek(y,m,d) % 7 == 0){
       stroke(255,0,0);
     }else if( dayOfWeek(y,m,d) % 7 == 6){
