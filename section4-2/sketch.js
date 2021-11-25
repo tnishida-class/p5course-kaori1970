@@ -6,7 +6,8 @@ let balls;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  balls = [];
+  const c = { x: width/2, y: height/2, size: random(20,80), vx: 0, vy: 5 };
+  balls = [c];
 }
 
 function draw(){
@@ -17,16 +18,20 @@ function draw(){
     b.x += b.vx;
     b.y += b.vy;
   }
+
 }
 
 function mouseDragged(){
   const dx = mouseX - pmouseX;
   const dy = mouseY - pmouseY;
-  if(mag(dx, dy) > 5){
-    const b = { x: mouseX, y: mouseY, size: 20, vx: dx, vy: dy };
+     if(mag(dx, dy) > 5){
+      const b = { x: mouseX, y: mouseY, size: random(20,80), vx: dx, vy: dy };
     balls.push(b);
   }
 }
+
+
+
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
